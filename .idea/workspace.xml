@@ -5,15 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc51c2e-3285-4fc3-a5fe-8b2bbc0155f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/01-python-core/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-python-core/app/api/search_router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-python-core/app/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-python-core/app/repositories/document_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pySourceRootDetection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/api/document_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/models/document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/models/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/repositories/document_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/services/document_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dependencies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/api/chat_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/client/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/client/openai_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/models/chat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llm/services/chat_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python-ai-engineering-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-ai-engineering-lab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-python-core/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/01-python-core/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-python-core/app/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/01-python-core/app/services/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-python-core/app/services/document_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/01-python-core/app/services/document_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-python-core/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/01-python-core/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/api/search_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/models/document.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/models/search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/repositories/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/repositories/document_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/app/services/document_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-python-core/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,75 +58,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "madhukar-gautam"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;madhukar-gautam&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/madhukar-gautam/python-ai-engineering-lab.git",
-    "accountId": "abb3a2e4-6849-4766-ac6d-318964a80619"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/madhukar-gautam/python-ai-engineering-lab.git&quot;,
+    &quot;accountId&quot;: &quot;abb3a2e4-6849-4766-ac6d-318964a80619&quot;
   }
-}]]></component>
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.011359160291565" />
-      <entry key="MS500" value="1.4083844955550113" />
-      <entry key="S2" value="1.7994058303524723" />
-      <entry key="S5" value="1.914338326506944" />
-      <entry key="S10" value="1.9562103986621655" />
-      <entry key="S30" value="1.9853857222387001" />
-      <entry key="S60" value="2.0252484514395155" />
-      <entry key="M2" value="2.587755846876199" />
-      <entry key="M5" value="6.078692337312251" />
-      <entry key="M10" value="10.950213959175505" />
-      <entry key="M15" value="15.939421606608501" />
-      <entry key="M30" value="34.92369624422361" />
-      <entry key="H1" value="77.76412806858748" />
-      <entry key="H2" value="140.06263320880961" />
-      <entry key="H4" value="199.17016683910376" />
-      <entry key="D1" value="275.51845866565543" />
-      <entry key="W1" value="292.1143944233259" />
+      <entry key="MS100" value="1.2269894062583757" />
+      <entry key="MS500" value="3.1168848023993907" />
+      <entry key="S2" value="6.23171875521382" />
+      <entry key="S5" value="7.691570656524726" />
+      <entry key="S10" value="8.305821180180846" />
+      <entry key="S30" value="8.76241274128002" />
+      <entry key="S60" value="9.052948296648298" />
+      <entry key="M2" value="10.193049464168439" />
+      <entry key="M5" value="13.164048965282594" />
+      <entry key="M10" value="16.453303711161055" />
+      <entry key="M15" value="20.48446335959969" />
+      <entry key="M30" value="37.14204691771615" />
+      <entry key="H1" value="77.48908480416976" />
+      <entry key="H2" value="146.44075118334027" />
+      <entry key="H4" value="221.90894868797668" />
+      <entry key="D1" value="331.239879827431" />
+      <entry key="W1" value="356.54758401190253" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.685444415905216E-262" />
-      <entry key="MS500" value="4.850686795554703E-53" />
-      <entry key="S2" value="8.345470155484825E-14" />
-      <entry key="S5" value="5.869219115840317E-6" />
-      <entry key="S10" value="0.0024226471303579653" />
-      <entry key="S30" value="0.1344216147226835" />
-      <entry key="S60" value="0.3858172079996479" />
-      <entry key="M2" value="0.9066197006367804" />
-      <entry key="M5" value="2.5651521053679422" />
-      <entry key="M10" value="4.122126446403723" />
-      <entry key="M15" value="4.920300678412723" />
-      <entry key="M30" value="6.496319923836309" />
-      <entry key="H1" value="9.864921908298541" />
-      <entry key="H2" value="15.072850052047453" />
-      <entry key="H4" value="20.049110278141583" />
-      <entry key="D1" value="26.39854100019653" />
-      <entry key="W1" value="27.763292516738797" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.010524447952764E-171" />
+      <entry key="S10" value="3.178874719067681E-86" />
+      <entry key="S30" value="3.167805610068783E-29" />
+      <entry key="S60" value="5.635566498069284E-15" />
+      <entry key="M2" value="7.775792581898665E-8" />
+      <entry key="M5" value="0.0019786781166506507" />
+      <entry key="M10" value="0.09262948739981994" />
+      <entry key="M15" value="0.39179921816121027" />
+      <entry key="M30" value="1.9376716587252194" />
+      <entry key="H1" value="5.567703925876462" />
+      <entry key="H2" value="11.627723703418416" />
+      <entry key="H4" value="18.17078588716576" />
+      <entry key="D1" value="27.492693954519307" />
+      <entry key="W1" value="29.625659550761707" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9012504626112604" />
-      <entry key="MS500" value="0.9827833803538757" />
-      <entry key="S2" value="1.235630359006497" />
-      <entry key="S5" value="1.5637411003851736" />
-      <entry key="S10" value="1.753239339784183" />
-      <entry key="S30" value="2.036898427879868" />
-      <entry key="S60" value="2.361424448621866" />
-      <entry key="M2" value="3.457197262895889" />
-      <entry key="M5" value="8.60671969460689" />
-      <entry key="M10" value="15.041866344404262" />
-      <entry key="M15" value="20.835055756348535" />
-      <entry key="M30" value="41.402703679024334" />
-      <entry key="H1" value="87.6146114563275" />
-      <entry key="H2" value="155.12385057871708" />
-      <entry key="H4" value="219.21138383251773" />
-      <entry key="D1" value="301.915247226512" />
-      <entry key="W1" value="319.8774232516585" />
+      <entry key="MS100" value="1.1925003161783774" />
+      <entry key="MS500" value="3.0739601426686285" />
+      <entry key="S2" value="6.198250751130176" />
+      <entry key="S5" value="7.674128309699533" />
+      <entry key="S10" value="8.296272723220977" />
+      <entry key="S30" value="8.759025825539625" />
+      <entry key="S60" value="9.051136086228684" />
+      <entry key="M2" value="10.191844771668013" />
+      <entry key="M5" value="13.16521503454638" />
+      <entry key="M10" value="16.544877536904366" />
+      <entry key="M15" value="20.874223193005406" />
+      <entry key="M30" value="39.07490009213444" />
+      <entry key="H1" value="83.04915982049418" />
+      <entry key="H2" value="158.05992284569746" />
+      <entry key="H4" value="240.0728417173075" />
+      <entry key="D1" value="358.73079979690647" />
+      <entry key="W1" value="386.17296967785825" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -113,35 +141,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.__init__.executor": "Run",
-    "Python.document.executor": "Run",
-    "Python.document_service.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.service.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.document.executor&quot;: &quot;Run&quot;,
+    &quot;Python.document_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/madhu/PycharmProjects/python-ai-engineering-lab/app/core&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab\app\core" />
+      <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab\chat-models\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab\chat-models\app" />
+      <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab" />
       <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab\01-python-core\app\services" />
       <recent name="C:\Users\madhu\PycharmProjects\python-ai-engineering-lab\01-python-core\app" />
     </key>
@@ -160,7 +196,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1789797420116</updated>
-      <workItem from="1789797482713" duration="12046000" />
+      <workItem from="1789797482713" duration="16329000" />
+      <workItem from="1789818596565" duration="360000" />
     </task>
     <servers />
   </component>
