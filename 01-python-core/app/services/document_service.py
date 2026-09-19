@@ -1,13 +1,21 @@
 from app.models import Document, SearchRequest
+from app.repositories import DocumentRepository
 
 
 class DocumentService:
 
+    def __init__(
+        self,
+        repository: DocumentRepository
+    ) -> None:
+        self.repository = repository
+
     def search(
         self,
-        documents: list[Document],
         request: SearchRequest
     ) -> list[Document]:
+
+        documents = self.repository.find_all()
 
         words = request.keyword.lower().split()
 
@@ -23,6 +31,12 @@ class DocumentService:
             key=lambda document: document.score,
             reverse=True
         )[:request.top_k]
+
+    def get_documents(
+        self
+    ) -> list[Document]:
+
+        return self.repository.find_all()
 
     @staticmethod
     def _matches(
