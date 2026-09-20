@@ -7,8 +7,9 @@ from app.llm.services.chat_service import ChatService
 router = APIRouter(prefix="/api/v1/chat", tags=["LLM"])
 
 @router.post("", response_model=ChatResponse)
-def chat(
+async def chat(
     request: ChatRequest,
-    service: ChatService = Depends(get_chat_service),
+    service: ChatService = Depends(get_chat_service)
 ) -> ChatResponse:
-    return service.chat(request)
+
+    return await service.chat(request)

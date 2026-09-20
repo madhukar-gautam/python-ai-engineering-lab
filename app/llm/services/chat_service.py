@@ -1,10 +1,27 @@
-from app.llm.clients.openai_client import OpenAIClient
+from app.llm.clients.llm_client import LLMClient
 from app.llm.models.chat import ChatRequest, ChatResponse
 
+
 class ChatService:
-    def __init__(self, llm_client: OpenAIClient) -> None:
+
+    def __init__(
+        self,
+        llm_client: LLMClient
+    ) -> None:
         self.llm_client = llm_client
 
-    def chat(self, request: ChatRequest) -> ChatResponse:
-        answer = self.llm_client.generate(request.message)
-        return ChatResponse(answer=answer, model=self.llm_client.model)
+    async def chat(
+            self,
+            request: ChatRequest
+    ) -> ChatResponse:
+        result = await self.llm_client.generate(
+            message=request.message,
+            system_prompt=request.system_prompt
+        )
+
+        return ChatResponse(
+            answer=result.answer,
+            model=result.model,
+            input_tokens=result.input_tokens,
+            output_tokens=result.output_tokens
+        )
