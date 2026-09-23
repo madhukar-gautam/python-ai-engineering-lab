@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc51c2e-3285-4fc3-a5fe-8b2bbc0155f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/llm/clients/llm_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llm/exceptions/exception_handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llm/exceptions/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llm/exceptions/llm_error.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llm/exceptions/llm_service_error.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llm/exceptions/llm_timeout_error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/api/embedding_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/clients/embedding_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/clients/openai_embedding_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/models/embedding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/models/semantic_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/services/embedding_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/services/semantic_search_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/embeddings/similarity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python-ai-engineering-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-ai-engineering-lab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/llm/api/chat_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/llm/api/chat_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/llm/clients/openai_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/llm/clients/openai_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/llm/models/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/llm/models/chat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/llm/services/chat_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/llm/services/chat_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
