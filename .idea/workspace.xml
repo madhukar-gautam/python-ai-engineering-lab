@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc51c2e-3285-4fc3-a5fe-8b2bbc0155f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/embeddings/api/embedding_router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/clients/embedding_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/clients/openai_embedding_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/models/embedding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/models/semantic_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/services/embedding_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/services/semantic_search_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/embeddings/similarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/api/rag_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/models/rag.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/models/vector_document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/services/SemanticSearchService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/services/ingestion_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/services/rag_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/services/text_chunker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/vectorstores/in_memory_vector_store.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/rag/vectorstores/vector_store.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/repositories/document_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/repositories/document_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/embeddings/models/semantic_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/embeddings/models/semantic_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/embeddings/services/semantic_search_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/embeddings/services/semantic_search_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +176,7 @@
       <updated>1789797420116</updated>
       <workItem from="1789797482713" duration="16329000" />
       <workItem from="1789818596565" duration="1049000" />
+      <workItem from="1790239885143" duration="3804000" />
     </task>
     <servers />
   </component>

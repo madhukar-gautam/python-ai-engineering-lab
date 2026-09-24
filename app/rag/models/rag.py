@@ -1,8 +1,8 @@
 from pydantic import BaseModel, Field
 
 
-class SemanticSearchRequest(BaseModel):
-    query: str = Field(
+class RagRequest(BaseModel):
+    question: str = Field(
         min_length=1,
         max_length=10_000
     )
@@ -10,7 +10,7 @@ class SemanticSearchRequest(BaseModel):
     top_k: int = Field(
         default=3,
         ge=1,
-        le=20
+        le=10
     )
 
     min_similarity: float = Field(
@@ -20,7 +20,12 @@ class SemanticSearchRequest(BaseModel):
     )
 
 
-class SemanticSearchResult(BaseModel):
+class RagSource(BaseModel):
     id: str
     text: str
     similarity: float
+
+
+class RagResponse(BaseModel):
+    answer: str
+    sources: list[RagSource]

@@ -13,14 +13,14 @@ class SemanticSearchService:
         embedding_client: EmbeddingClient,
         vector_store: VectorStore
     ) -> None:
+
         self.embedding_client = embedding_client
         self.vector_store = vector_store
 
     async def search(
-        self,
-        request: SemanticSearchRequest
+            self,
+            request: SemanticSearchRequest
     ) -> list[SemanticSearchResult]:
-
         query_embedding = await self.embedding_client.embed(
             request.query
         )
