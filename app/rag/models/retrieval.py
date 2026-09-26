@@ -1,14 +1,12 @@
 from pydantic import BaseModel, Field
 
 
-class VectorDocument(BaseModel):
+class RetrievalResult(BaseModel):
     id: str
-
-    document_id: str
-
     text: str
+    score: float
 
-    embedding: list[float]
+    retrieval_method: str
 
     metadata: dict[str, str] = Field(
         default_factory=dict

@@ -1,6 +1,4 @@
-from app.embeddings.models.semantic_search import (
-    SemanticSearchResult
-)
+from app.embeddings.models.semantic_search import SemanticSearchResult
 from app.embeddings.similarity import cosine_similarity
 from app.rag.models.vector_document import VectorDocument
 
@@ -45,3 +43,6 @@ class InMemoryVectorStore:
         )
 
         return results[:top_k]
+
+    def get_all(self) -> list[VectorDocument]:
+        return self.documents.copy()

@@ -44,8 +44,13 @@ class IngestionService:
 
                 vector_document = VectorDocument(
                     id=f"{document.id}-{index}",
+                    document_id=document.id,
                     text=chunk,
-                    embedding=embedding
+                    embedding=embedding,
+                    metadata={
+                        "source": f"document-{document.id}",
+                        "chunk_index": str(index)
+                    }
                 )
 
                 self.vector_store.add(

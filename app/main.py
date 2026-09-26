@@ -8,6 +8,9 @@ from app.embeddings.api.embedding_router import (
     router as embedding_router
 )
 from app.rag.api.rag_router import router as rag_router
+from app.rag.api.retrieval_router import (
+    router as retrieval_router
+)
 
 import logging
 logging.basicConfig(
@@ -31,3 +34,4 @@ def health() -> dict[str, str]:
     return {"status": "UP", "environment": settings.environment}
 app.include_router(embedding_router)
 app.include_router(rag_router)
+app.include_router(retrieval_router)

@@ -2,9 +2,16 @@ from pydantic import BaseModel, Field
 
 
 class RagRequest(BaseModel):
+
     question: str = Field(
         min_length=1,
         max_length=10_000
+    )
+
+    candidate_k: int = Field(
+        default=10,
+        ge=1,
+        le=50
     )
 
     top_k: int = Field(
@@ -18,7 +25,6 @@ class RagRequest(BaseModel):
         ge=-1.0,
         le=1.0
     )
-
 
 class RagSource(BaseModel):
     id: str

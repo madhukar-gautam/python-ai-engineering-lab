@@ -17,6 +17,15 @@ from app.rag.services.rag_service import RagService
 from app.rag.services.text_chunker import TextChunker
 from app.rag.vectorstores.in_memory_vector_store import InMemoryVectorStore
 from app.rag.vectorstores.vector_store import VectorStore
+from app.rag.rerankers.reranker import Reranker
+from app.rag.rerankers.similarity_reranker import SimilarityReranker
+from app.rag.retrievers.keyword_retriever import (
+    KeywordRetriever
+)
+from app.rag.retrievers.vector_retriever import VectorRetriever
+from app.rag.retrievers.hybrid_retriever import HybridRetriever
+from app.rag.retrievers.retriever import Retriever
+from app.rag.rerankers.llm_reranker import LLMReranker
 
 
 # =========================================================
@@ -130,10 +139,56 @@ def get_ingestion_service(
         chunker=chunker
     )
 
+def get_reranker(
+    llm_client: LLMClient = Depends(
+        get_llm_client
+    )
+) -> Reranker:
 
+    return LLMReranker(
+        llm_client=llm_client
+    )
+
+
+def get_keyword_retriever(
+    store: VectorStore = Depends(get_vector_store)
+) -> KeywordRetriever:
+
+    return KeywordRetriever(
+        vector_store=store
+    )
+def get_vector_retriever(
+    embedding_client: EmbeddingClient = Depends(
+        get_embedding_client
+    ),
+    store: VectorStore = Depends(
+        get_vector_store
+    )
+) -> VectorRetriever:
+
+    return VectorRetriever(
+        embedding_client=embedding_client,
+        vector_store=store
+    )
+def get_hybrid_retriever(
+    vector_retriever: VectorRetriever = Depends(
+        get_vector_retriever
+    ),
+    keyword_retriever: KeywordRetriever = Depends(
+        get_keyword_retriever
+    )
+) -> Retriever:
+
+    return HybridRetriever(
+        vector_retriever=vector_retriever,
+        keyword_retriever=keyword_retriever
+    )
 def get_rag_service(
-    search_service: SemanticSearchService = Depends(
-        get_semantic_search_service
+    retriever: Retriever = Depends(
+        get_hybrid_retriever
+    ),
+    reranker: Reranker = Depends(
+        get_reranker
     ),
     llm_client: LLMClient = Depends(
         get_llm_client
@@ -141,6 +196,14 @@ def get_rag_service(
 ) -> RagService:
 
     return RagService(
-        search_service=search_service,
+        retriever=retriever,
+        reranker=reranker,
+        llm_client=llm_client
+    )
+def get_reranker(
+    llm_client: LLMClient = Depends(get_llm_client)
+) -> Reranker:
+
+    return LLMReranker(
         llm_client=llm_client
     )

@@ -52,4 +52,13 @@ class DocumentRepository:
                 ),
                 score=0.80
             ),
+            Document(
+                id="6",
+                text=(
+                    "Incident ORDER-938271 failed while processing "
+                    "a database request. The application reported "
+                    "ORA-12541 because the Oracle listener was unavailable."
+                ),
+                score=0.90
+            ),
         ]
