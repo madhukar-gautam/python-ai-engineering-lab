@@ -11,6 +11,9 @@ from app.rag.api.rag_router import router as rag_router
 from app.rag.api.retrieval_router import (
     router as retrieval_router
 )
+from app.evaluation.api.evaluation_router import (
+    router as evaluation_router
+)
 
 import logging
 logging.basicConfig(
@@ -35,3 +38,4 @@ def health() -> dict[str, str]:
 app.include_router(embedding_router)
 app.include_router(rag_router)
 app.include_router(retrieval_router)
+app.include_router(evaluation_router)
