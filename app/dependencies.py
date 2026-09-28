@@ -210,10 +210,5 @@ def get_reranker(
     return LLMReranker(
         llm_client=llm_client
     )
-def get_rca_agent(
-    llm_client: LLMClient = Depends(get_llm_client)
-) -> RCAAgent:
-
-    return RCAAgent(
-        llm_client=llm_client
-    )
+def get_rca_agent() -> RCAAgent:
+    return RCAAgent()
