@@ -14,6 +14,9 @@ from app.rag.api.retrieval_router import (
 from app.evaluation.api.evaluation_router import (
     router as evaluation_router
 )
+from app.agents.api.agent_router import (
+    router as agent_router
+)
 
 import logging
 logging.basicConfig(
@@ -39,3 +42,4 @@ app.include_router(embedding_router)
 app.include_router(rag_router)
 app.include_router(retrieval_router)
 app.include_router(evaluation_router)
+app.include_router(agent_router)

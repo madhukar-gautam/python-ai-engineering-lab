@@ -18,7 +18,6 @@ from app.rag.services.text_chunker import TextChunker
 from app.rag.vectorstores.in_memory_vector_store import InMemoryVectorStore
 from app.rag.vectorstores.vector_store import VectorStore
 from app.rag.rerankers.reranker import Reranker
-from app.rag.rerankers.similarity_reranker import SimilarityReranker
 from app.rag.retrievers.keyword_retriever import (
     KeywordRetriever
 )
@@ -26,6 +25,10 @@ from app.rag.retrievers.vector_retriever import VectorRetriever
 from app.rag.retrievers.hybrid_retriever import HybridRetriever
 from app.rag.retrievers.retriever import Retriever
 from app.rag.rerankers.llm_reranker import LLMReranker
+from fastapi import Depends
+
+from app.agents.services.rca_agent import RCAAgent
+
 
 
 # =========================================================
@@ -205,5 +208,12 @@ def get_reranker(
 ) -> Reranker:
 
     return LLMReranker(
+        llm_client=llm_client
+    )
+def get_rca_agent(
+    llm_client: LLMClient = Depends(get_llm_client)
+) -> RCAAgent:
+
+    return RCAAgent(
         llm_client=llm_client
     )
