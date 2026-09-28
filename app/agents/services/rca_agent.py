@@ -23,7 +23,7 @@ class RCAAgent:
         question: str
     ) -> str:
 
-        logger.warning(
+        logger.info(
             "RCA agent started question=%s",
             question
         )
@@ -52,7 +52,7 @@ class RCAAgent:
         tool = action["tool"]
         arguments = action["arguments"]
 
-        logger.warning(
+        logger.info(
             "Agent selected tool=%s arguments=%s",
             tool,
             arguments
@@ -71,7 +71,7 @@ class RCAAgent:
         else:
             observation = "Unknown tool."
 
-        logger.warning(
+        logger.info(
             "Tool observation=%s",
             observation
         )

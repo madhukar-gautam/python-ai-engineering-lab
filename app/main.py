@@ -17,12 +17,13 @@ from app.evaluation.api.evaluation_router import (
 from app.agents.api.agent_router import (
     router as agent_router
 )
+from app.logging_config import configure_logging
+configure_logging()
 
-import logging
-logging.basicConfig(
-    level=settings.log_level,
-    format="%(asctime)s %(levelname)s %(name)s - %(message)s"
+app = FastAPI(
+    title=settings.app_name
 )
+
 
 app = FastAPI(
     title=settings.app_name,
