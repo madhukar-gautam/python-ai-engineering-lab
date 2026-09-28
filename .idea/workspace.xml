@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc51c2e-3285-4fc3-a5fe-8b2bbc0155f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/agents/graphs/rca_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/agents/graphs/multi_agent_rca_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/agents/specialists/knowledge_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/agents/specialists/log_agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/agents/graphs/rca_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/agents/graphs/rca_graph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/agents/services/rca_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/agents/services/rca_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +168,7 @@
       <updated>1789797420116</updated>
       <workItem from="1789797482713" duration="16329000" />
       <workItem from="1789818596565" duration="1049000" />
-      <workItem from="1790239885143" duration="25362000" />
+      <workItem from="1790239885143" duration="26907000" />
     </task>
     <servers />
   </component>
