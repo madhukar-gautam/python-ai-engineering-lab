@@ -30,7 +30,7 @@ class OpenAIClient:
         self,
         message: str,
         system_prompt: str
-    ) -> LLMResult:
+    , trace_id=None) -> LLMResult:
 
         start_time = time.perf_counter()
 
@@ -77,6 +77,7 @@ class OpenAIClient:
 
             logger.info(
                 "LLM request completed model=%s latency_ms=%.2f",
+                trace_id,
                 self.model,
                 latency_ms
             )

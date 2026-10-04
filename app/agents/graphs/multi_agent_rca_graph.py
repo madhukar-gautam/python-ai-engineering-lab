@@ -1,9 +1,11 @@
+import time
 from typing import TypedDict
 
 from langgraph.graph import START, END, StateGraph
 
 from app.agents.specialists.log_agent import LogAgent
 from app.agents.specialists.knowledge_agent import KnowledgeAgent
+from app.observability.trace import logger
 
 
 class MultiAgentRCAState(TypedDict, total=False):
@@ -17,23 +19,43 @@ log_agent = LogAgent()
 knowledge_agent = KnowledgeAgent()
 
 
-async def log_agent_node(
-    state: MultiAgentRCAState
-) -> dict:
+
+
+async def log_agent_node(state):
+
+    start = time.perf_counter()
 
     logs = await log_agent.investigate(
         state["order_id"]
     )
 
+    latency_ms = (
+        time.perf_counter() - start
+    ) * 1000
+
+    logger.info(
+        "│   ├── TOOL_CALL search_logs latency=%.2fms",
+        latency_ms
+    )
+
     return {
         "logs": logs
     }
-async def knowledge_agent_node(
-    state: MultiAgentRCAState
-) -> dict:
+async def knowledge_agent_node(state):
+
+    start = time.perf_counter()
 
     knowledge = await knowledge_agent.investigate(
         state["error_code"]
+    )
+
+    latency_ms = (
+        time.perf_counter() - start
+    ) * 1000
+
+    logger.info(
+        "│   ├── TOOL_CALL search_knowledge latency=%.2fms",
+        latency_ms
     )
 
     return {
